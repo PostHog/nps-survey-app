@@ -1,6 +1,6 @@
 {
   "name": "NPS App",
-  "url": "<repo_url>",
+  "url": "https://github.com/PostHog/nps-score-app",
   "description": "A simple NPS score collector",
   "config": [
     {
