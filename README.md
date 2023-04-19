@@ -35,15 +35,20 @@ This is a very simple site app which works by simply displaying a 0-10 scale for
 - Using a correlation analysis to identify what good/bad scores correlate to
 - And, of course, computing your overall NPS score
 
-### How to figure out your NPS score in PostHog?
+NPS scores are ingested to PostHog as unique events, with the following names: `NPS10`, `NPS9`, `NPS8`, etc. 
 
+### How can you figure out your NPS score in PostHog?
+Using [formulas](https://posthog.com/docs/product-analytics/trends#using-formulas)!
 
-### This app needs some love
+Specifically, this is the formula you need to remember: `NPS = % OF PROMOTERS - % DETRACTORS`
+
+It can help to organize your data into a PostHog table view. Then simply figure out your percentage of promoters (Number of Promoters / Number of total respondents) and subtract the percentage of detractors (Number of detractors / Number of total respondents). The resulting score is your NPS score. 
+
+### This app needs some love!
 This app has some very rough edges, because it was made by a lowly marketer who had never used Typescript before. As a result, there are some things which could be done to improve it and contributions are welcome. 
 
 Obvious ideas include:
 
-- Any front-end improvements to make it look better
 - Making the 0-10 buttons flex, rather than appearing fixed in place
 - Making the whole app disappear when a button is clicked
 - Integrating the app with PostHog's feature flags, so it can be targeted to certain types of users
