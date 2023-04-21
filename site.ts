@@ -24,7 +24,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -42,7 +42,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -60,7 +60,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -78,7 +78,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -96,7 +96,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -114,7 +114,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -132,7 +132,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -150,7 +150,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -168,7 +168,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -186,7 +186,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -204,7 +204,7 @@ const style =`
     border-radius: 100%;
     text-align: center;
     line-height: 40px;
-    font-size: 22px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -212,17 +212,14 @@ const style =`
   .prompt {
     position: fixed;
     bottom: 100px;
-    right: 620px;
+    right: 100px;
     color: black;
     font-weight: normal;
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
     text-align: center;
-    line-height: 40px;
-    font-size: 22px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
     z-index: 999999;
@@ -233,8 +230,15 @@ export function inject({ config, posthog })
 
 {
   const shadow = createShadow(style)
+  const buttonsContainer = document.createElement(`div`)
+  shadow.appendChild(buttonsContainer)
   let buttonElement: HTMLButtonElement
 
+  const textarea = Object.assign(document.createElement('button'),{className: `prompt`,},)
+  shadow.appendChild(textarea)
+
+  textarea.innerText=config.prompt
+  
   function sendNPS10(): NPS10 {
     console.log(config.NPS10)
     posthog.capture('NPS10', { content: config.NPS10 })
@@ -245,7 +249,7 @@ export function inject({ config, posthog })
     innerText: '10',
     onclick: sendNPS10,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS9(): NPS9 {
     console.log('NPS 9')
@@ -257,7 +261,7 @@ export function inject({ config, posthog })
     innerText: '9',
     onclick: sendNPS9,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS8(): NPS8 {
     console.log('NPS 8')
@@ -269,7 +273,7 @@ export function inject({ config, posthog })
     innerText: '8',
     onclick: sendNPS8,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS7(): NPS7 {
     console.log('NPS 7')
@@ -281,7 +285,7 @@ export function inject({ config, posthog })
     innerText: '7',
     onclick: sendNPS7,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS6(): NPS6 {
     console.log('NPS 6')
@@ -293,7 +297,7 @@ export function inject({ config, posthog })
     innerText: '6',
     onclick: sendNPS6,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS5(): NPS5 {
     console.log('NPS 5')
@@ -305,7 +309,7 @@ export function inject({ config, posthog })
     innerText: '5',
     onclick: sendNPS5,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS4(): NPS4 {
     console.log('NPS 4')
@@ -317,7 +321,7 @@ export function inject({ config, posthog })
     innerText: '4',
     onclick: sendNPS4,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS3(): NPS3 {
     console.log('NPS 3')
@@ -329,7 +333,7 @@ export function inject({ config, posthog })
     innerText: '3',
     onclick: sendNPS3,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS2(): NPS2 {
     console.log('NPS 2')
@@ -341,7 +345,7 @@ export function inject({ config, posthog })
     innerText: '2',
     onclick: sendNPS2,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS1(): NPS1 {
     console.log('NPS 1')
@@ -353,7 +357,7 @@ export function inject({ config, posthog })
     innerText: '1',
     onclick: sendNPS1,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 
   function sendNPS0(): NPS0 {
     console.log('NPS 0')
@@ -365,7 +369,7 @@ export function inject({ config, posthog })
     innerText: '0',
     onclick: sendNPS0,
   })
-  shadow.appendChild(buttonElement)
+  buttonsContainer.appendChild(buttonElement)
 }
 
 function createShadow(style?: string): ShadowRoot {
