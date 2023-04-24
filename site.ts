@@ -11,208 +11,71 @@ const style =`
   text-align: left;
   margin-top: 0;
 }
-  .button10 {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button9 {
-    position: fixed;
-    bottom: 20px;
-    right: 80px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button8 {
-    position: fixed;
-    bottom: 20px;
-    right: 140px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button7 {
-    position: fixed;
-    bottom: 20px;
-    right: 200px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button6 {
-    position: fixed;
-    bottom: 20px;
-    right: 260px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button5 {
-    position: fixed;
-    bottom: 20px;
-    right: 320px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button4 {
-    position: fixed;
-    bottom: 20px;
-    right: 380px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button3 {
-    position: fixed;
-    bottom: 20px;
-    right: 440px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button2 {
-    position: fixed;
-    bottom: 20px;
-    right: 500px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button1 {
-    position: fixed;
-    bottom: 20px;
-    right: 560px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
-  .button0 {
-    position: fixed;
-    bottom: 20px;
-    right: 620px;
-    color: black;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: left;
-    width: 48px;
-    height: 48px;
-    border-radius: 100%;
-    text-align: center;
-    line-height: 40px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
-  }
+.button {
+  position: fixed;
+  bottom: 20px;
+  color: black;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: left;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 40px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 999999;
+}
+
+.button-0 {
+  right: 500px;
+}
+
+.button-1 {
+  right: 560px;
+}
+
+.button-2 {
+  right: 500px;
+}
+
+.button-3 {
+  right: 440px;
+}
+
+.button-4 {
+  right: 380px;
+}
+
+.button-5 {
+  right: 320px;
+}
+
+.button-6 {
+  right: 260px;
+}
+
+.button-7 {
+  right: 200px;
+}
+
+.button-8 {
+  right: 140px;
+}
+
+.button-9 {
+  right: 80px
+}
+
+.button-10 {
+  right:20px
+}
   .prompt {
     position: fixed;
     bottom: 100px;
-    right: 100px;
+    right: 60px;
     color: black;
     font-weight: normal;
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -245,7 +108,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button10',
+    className: 'button button-10',
     innerText: '10',
     onclick: sendNPS10,
   })
@@ -257,7 +120,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button9',
+    className: 'button button-9',
     innerText: '9',
     onclick: sendNPS9,
   })
@@ -269,7 +132,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button8',
+    className: 'button button-8',
     innerText: '8',
     onclick: sendNPS8,
   })
@@ -281,7 +144,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button7',
+    className: 'button button-7',
     innerText: '7',
     onclick: sendNPS7,
   })
@@ -293,7 +156,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button6',
+    className: 'button button-6',
     innerText: '6',
     onclick: sendNPS6,
   })
@@ -305,7 +168,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button5',
+    className: 'button button-5',
     innerText: '5',
     onclick: sendNPS5,
   })
@@ -317,7 +180,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button4',
+    className: 'button button-4',
     innerText: '4',
     onclick: sendNPS4,
   })
@@ -329,7 +192,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button3',
+    className: 'button button-3',
     innerText: '3',
     onclick: sendNPS3,
   })
@@ -341,7 +204,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button2',
+    className: 'button button-2',
     innerText: '2',
     onclick: sendNPS2,
   })
@@ -353,7 +216,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button1',
+    className: 'button button-1',
     innerText: '1',
     onclick: sendNPS1,
   })
@@ -365,7 +228,7 @@ export function inject({ config, posthog })
   }
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button0',
+    className: 'button button-0',
     innerText: '0',
     onclick: sendNPS0,
   })
