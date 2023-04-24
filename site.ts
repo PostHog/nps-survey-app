@@ -29,6 +29,10 @@ const style =`
   z-index: 999999;
 }
 
+.button:hover {
+  filter: brightness(0.8);
+}
+
 .button-0 {
   right: 560px;
 }
