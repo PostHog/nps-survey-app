@@ -30,11 +30,11 @@ const style =`
 }
 
 .button-0 {
-  right: 500px;
+  right: 560px;
 }
 
 .button-1 {
-  right: 560px;
+  right: 500px;
 }
 
 .button-2 {
@@ -102,135 +102,84 @@ export function inject({ config, posthog })
 
   textarea.innerText=config.prompt
   
-  function sendNPS10(): NPS10 {
-    console.log(config.NPS10)
-    posthog.capture('NPS10', { content: config.NPS10 })
-  }
+function sendNPS(value: number) {
+  console.log(`Sending NPS with value: ${value}`);
+    posthog.capture('NPS rating submitted', {value: value})  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-10',
     innerText: '10',
-    onclick: sendNPS10,
-  })
+    onclick: () => sendNPS(10),
+  });
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS9(): NPS9 {
-    console.log('NPS 9')
-    posthog.capture('NPS9', { content: config.NPS9 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-9',
     innerText: '9',
-    onclick: sendNPS9,
+    onclick: () => sendNPS(9),
   })
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS8(): NPS8 {
-    console.log('NPS 8')
-    posthog.capture('NPS8', { content: config.NPS8 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-8',
     innerText: '8',
-    onclick: sendNPS8,
+    onclick: () => sendNPS(8),
   })
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS7(): NPS7 {
-    console.log('NPS 7')
-    posthog.capture('NPS7', { content: config.NPS7 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-7',
     innerText: '7',
-    onclick: sendNPS7,
+    onclick: () => sendNPS(7),
   })
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS6(): NPS6 {
-    console.log('NPS 6')
-    posthog.capture('NPS6', { content: config.NPS6 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-6',
     innerText: '6',
-    onclick: sendNPS6,
+    onclick: () => sendNPS(6),
   })
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS5(): NPS5 {
-    console.log('NPS 5')
-    posthog.capture('NPS5', { content: config.NPS5 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-5',
     innerText: '5',
-    onclick: sendNPS5,
+    onclick: () => sendNPS(5),
   })
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS4(): NPS4 {
-    console.log('NPS 4')
-    posthog.capture('NPS4', { content: config.NPS4 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-4',
     innerText: '4',
-    onclick: sendNPS4,
+    onclick: () => sendNPS(4),
   })
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS3(): NPS3 {
-    console.log('NPS 3')
-    posthog.capture('NPS3', { content: config.NPS3 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-3',
     innerText: '3',
-    onclick: sendNPS3,
+    onclick: () => sendNPS(3),
   })
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS2(): NPS2 {
-    console.log('NPS 2')
-    posthog.capture('NPS2', { content: config.NPS2 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-2',
     innerText: '2',
-    onclick: sendNPS2,
+    onclick: () => sendNPS(2),
   })
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS1(): NPS1 {
-    console.log('NPS 1')
-    posthog.capture('NPS1', { content: config.NPS1 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-1',
     innerText: '1',
-    onclick: sendNPS1,
+    onclick: () => sendNPS(1),
   })
   buttonsContainer.appendChild(buttonElement)
-
-  function sendNPS0(): NPS0 {
-    console.log('NPS 0')
-    posthog.capture('NPS0', { content: config.NPS0 })
-  }
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-0',
     innerText: '0',
-    onclick: sendNPS0,
+    onclick: () => sendNPS(0),
   })
   buttonsContainer.appendChild(buttonElement)
 }

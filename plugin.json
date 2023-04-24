@@ -85,7 +85,7 @@
     },
     {
       "key": "NPS10",
-      "name": "NPS10",
+      "name": "NPS 10 logged",
       "type": "string",
       "default": "NPS 10",
       "required": false,
