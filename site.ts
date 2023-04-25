@@ -110,10 +110,8 @@ export function inject({ config, posthog })
   shadow.appendChild(textarea);
   
   function updatePrompt() {
-    const prompt = document.getElementById('prompt');
-    if (prompt) {
-      prompt.innerText = 'Thank you for your feedback!';
-    }
+      console.log(`Updating prompt`);
+      textarea.innerText = 'Thank you for your feedback!';
   }
   
   function sendNPS(value: number) {
