@@ -2,6 +2,14 @@
 
 const style =`
 
+.bordered {
+  border: 1px solid black;
+  padding: 10px;
+}
+.content-group {
+  display: flex;
+  justify-content: space-between;
+}
 .nps-title {
   font-family: -apple-system, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif,
       'Apple Color Emoji', 'Segoe UI Emoji', Segoe UI Symbol;
@@ -24,7 +32,7 @@ const style =`
   text-align: center;
   line-height: 40px;
   font-size: 16px;
-  border: 1px;
+  border: none;
   cursor: pointer;
   z-index: 999999;
 }
@@ -36,11 +44,11 @@ const style =`
 }
 
 .button-0 {
-  right: 560px;
+  right: 620px;
 }
 
 .button-1 {
-  right: 500px;
+  right: 560px;
 }
 
 .button-2 {
@@ -83,6 +91,7 @@ const style =`
     bottom: 100px;
     right: 60px;
     color: black;
+    background: white;
     font-weight: normal;
     font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-align: center;
@@ -100,6 +109,7 @@ export function inject({ config, posthog })
 {
   const shadow = createShadow(style);
   const buttonsContainer = document.createElement(`div`);
+  buttonsContainer.className = 'bordered';
   shadow.appendChild(buttonsContainer);
   
   let buttonElement: HTMLButtonElement;
