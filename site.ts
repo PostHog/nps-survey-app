@@ -96,33 +96,46 @@ const style =`
 export function inject({ config, posthog }) 
 
 {
-  const shadow = createShadow(style)
-  const buttonsContainer = document.createElement(`div`)
-  shadow.appendChild(buttonsContainer)
-  let buttonElement: HTMLButtonElement
-
-  const textarea = Object.assign(document.createElement('button'),{className: `prompt`,},)
-  shadow.appendChild(textarea)
-
-  textarea.innerText=config.prompt
+  const shadow = createShadow(style);
+  const buttonsContainer = document.createElement(`div`);
+  shadow.appendChild(buttonsContainer);
   
-function sendNPS(value: number) {
-  console.log(`Sending NPS with value: ${value}`);
-    posthog.capture('NPS rating submitted', {value: value})  }
-
+  let buttonElement: HTMLButtonElement;
+  
+  const textarea = Object.assign(document.createElement('button'), {
+    className: `prompt`,
+  });
+  textarea.id = 'prompt';
+  textarea.innerText = 'On a scale of 0-10, how likely are you to recommend this product?';
+  shadow.appendChild(textarea);
+  
+  function updatePrompt() {
+    const prompt = document.getElementById('prompt');
+    if (prompt) {
+      prompt.innerText = 'Thank you for your feedback!';
+    }
+  }
+  
+  function sendNPS(value: number) {
+    console.log(`Sending NPS with value: ${value}`);
+    updatePrompt();
+    posthog.capture('NPS rating submitted', { value: value });
+  }
+  
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-10',
     innerText: '10',
     onclick: () => sendNPS(10),
   });
-  buttonsContainer.appendChild(buttonElement)
-
+  buttonsContainer.appendChild(buttonElement);
+  
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-9',
     innerText: '9',
     onclick: () => sendNPS(9),
-  })
-  buttonsContainer.appendChild(buttonElement)
+  });
+  buttonsContainer.appendChild(buttonElement);
+  
 
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-8',
