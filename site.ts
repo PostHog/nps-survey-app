@@ -112,12 +112,21 @@ export function inject({ config, posthog })
   function updatePrompt() {
       console.log(`Updating prompt`);
       textarea.innerText = 'Thank you for your feedback!';
+      setTimeout(function(){
+        textarea.style.display = "none";
+      }, 3000); // 3000 milliseconds = 3 seconds
   }
   
   function sendNPS(value: number) {
     console.log(`Sending NPS with value: ${value}`);
     updatePrompt();
     posthog.capture('NPS rating submitted', { value: value });
+    const buttons = buttonsContainer.querySelectorAll('button');
+    buttons.forEach(button => {
+      setTimeout(function(){
+      button.style.display = "none";
+    }, 10); // 10 milliseconds = 0.001 seconds
+    });
   }
   
   buttonElement = Object.assign(document.createElement('button'), {
