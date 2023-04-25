@@ -24,13 +24,15 @@ const style =`
   text-align: center;
   line-height: 40px;
   font-size: 16px;
-  border: none;
+  border: 1px;
   cursor: pointer;
   z-index: 999999;
 }
 
 .button:hover {
   filter: brightness(0.8);
+  font-weight: bold;
+  bottom: 25px;
 }
 
 .button-0 {
