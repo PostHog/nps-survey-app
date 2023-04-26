@@ -6,18 +6,9 @@ const style =`
   border: 1px solid black;
   padding: 10px;
 }
-.content-group {
+.container {
   display: flex;
   justify-content: space-between;
-}
-.nps-title {
-  font-family: -apple-system, BlinkMacSystemFont, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif,
-      'Apple Color Emoji', 'Segoe UI Emoji', Segoe UI Symbol;
-  color: #2d2d2d;
-  font-size: 1.125rem;
-  font-weight: 700;
-  text-align: left;
-  margin-top: 0;
 }
 .button {
   position: fixed;
@@ -109,7 +100,6 @@ export function inject({ config, posthog })
 {
   const shadow = createShadow(style);
   const buttonsContainer = document.createElement(`div`);
-  buttonsContainer.className = 'bordered';
   shadow.appendChild(buttonsContainer);
   
   let buttonElement: HTMLButtonElement;
