@@ -5,6 +5,7 @@ const style =`
 .bordered {
   border: 2px solid black;
   padding: 15px;
+  border-radius: 25px;
 }
 .container {
   display: flex;
