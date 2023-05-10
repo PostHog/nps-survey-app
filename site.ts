@@ -3,15 +3,24 @@
 const style =`
 
 .bordered {
-  border: 1px solid black;
-  padding: 10px;
+  border: 2px solid black;
+  padding: 15px;
 }
 .container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
+.prompt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+  }
 .button {
-  position: fixed;
   bottom: 20px;
   color: black;
   font-weight: normal;
@@ -77,21 +86,18 @@ const style =`
 .button-10 {
   right:20px
 }
-  .prompt {
-    position: fixed;
-    bottom: 100px;
-    right: 60px;
-    color: black;
-    background: white;
-    font-weight: normal;
-    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    text-align: center;
-    text-align: center;
-    line-height: 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    z-index: 999999;
+.prompt {
+  color: black;
+  background: white;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+  text-align: center;
+  line-height: 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 999999;
   }
 `
 
@@ -99,17 +105,25 @@ export function inject({ config, posthog })
 
 {
   const shadow = createShadow(style);
-  const buttonsContainer = document.createElement(`div`);
-  shadow.appendChild(buttonsContainer);
-  
-  let buttonElement: HTMLButtonElement;
-  
+
+  const promptContainer = document.createElement('div');
+  promptContainer.className = 'prompt-container';
+  shadow.appendChild(promptContainer);
+
+  const container = document.createElement('div');
+  container.className = 'container';
+  shadow.appendChild(container);
+
   const textarea = Object.assign(document.createElement('button'), {
     className: `prompt`,
   });
   textarea.id = 'prompt';
   textarea.innerText = 'On a scale of 0-10, how likely are you to recommend this product?';
-  shadow.appendChild(textarea);
+  promptContainer.appendChild(textarea);
+
+  const buttonsContainer = document.createElement('div');
+  buttonsContainer.className = 'bordered';
+  promptContainer.appendChild(buttonsContainer);
   
   function updatePrompt() {
       console.log(`Updating prompt`);
@@ -132,52 +146,24 @@ export function inject({ config, posthog })
   }
   
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-10',
-    innerText: '10',
-    onclick: () => sendNPS(10),
+    className: 'button button-0',
+    innerText: '0',
+    onclick: () => sendNPS(0),
   });
   buttonsContainer.appendChild(buttonElement);
   
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-9',
-    innerText: '9',
-    onclick: () => sendNPS(9),
+    className: 'button button-1',
+    innerText: '1',
+    onclick: () => sendNPS(1),
   });
   buttonsContainer.appendChild(buttonElement);
   
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-8',
-    innerText: '8',
-    onclick: () => sendNPS(8),
-  })
-  buttonsContainer.appendChild(buttonElement)
-
-  buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-7',
-    innerText: '7',
-    onclick: () => sendNPS(7),
-  })
-  buttonsContainer.appendChild(buttonElement)
-
-  buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-6',
-    innerText: '6',
-    onclick: () => sendNPS(6),
-  })
-  buttonsContainer.appendChild(buttonElement)
-
-  buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-5',
-    innerText: '5',
-    onclick: () => sendNPS(5),
-  })
-  buttonsContainer.appendChild(buttonElement)
-
-  buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-4',
-    innerText: '4',
-    onclick: () => sendNPS(4),
+    className: 'button button-2',
+    innerText: '2',
+    onclick: () => sendNPS(2),
   })
   buttonsContainer.appendChild(buttonElement)
 
@@ -189,23 +175,51 @@ export function inject({ config, posthog })
   buttonsContainer.appendChild(buttonElement)
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-2',
-    innerText: '2',
-    onclick: () => sendNPS(2),
+    className: 'button button-4',
+    innerText: '4',
+    onclick: () => sendNPS(4),
   })
   buttonsContainer.appendChild(buttonElement)
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-1',
-    innerText: '1',
-    onclick: () => sendNPS(1),
+    className: 'button button-5',
+    innerText: '5',
+    onclick: () => sendNPS(5),
   })
   buttonsContainer.appendChild(buttonElement)
 
   buttonElement = Object.assign(document.createElement('button'), {
-    className: 'button button-0',
-    innerText: '0',
-    onclick: () => sendNPS(0),
+    className: 'button button-6',
+    innerText: '6',
+    onclick: () => sendNPS(6),
+  })
+  buttonsContainer.appendChild(buttonElement)
+
+  buttonElement = Object.assign(document.createElement('button'), {
+    className: 'button button-7',
+    innerText: '7',
+    onclick: () => sendNPS(7),
+  })
+  buttonsContainer.appendChild(buttonElement)
+
+  buttonElement = Object.assign(document.createElement('button'), {
+    className: 'button button-8',
+    innerText: '8',
+    onclick: () => sendNPS(8),
+  })
+  buttonsContainer.appendChild(buttonElement)
+
+  buttonElement = Object.assign(document.createElement('button'), {
+    className: 'button button-9',
+    innerText: '9',
+    onclick: () => sendNPS(9),
+  })
+  buttonsContainer.appendChild(buttonElement)
+
+  buttonElement = Object.assign(document.createElement('button'), {
+    className: 'button button-10',
+    innerText: '10',
+    onclick: () => sendNPS(10),
   })
   buttonsContainer.appendChild(buttonElement)
 }
