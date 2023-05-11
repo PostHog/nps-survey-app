@@ -159,7 +159,8 @@ export function inject({ config, posthog })
       setTimeout(function(){
       button.style.display = "none";
     }, 10); // 10 milliseconds = 0.001 seconds
-    });
+  });
+  buttonsContainer.style.display = 'none';
   }
   
   buttonElement = Object.assign(document.createElement('button'), {
@@ -176,7 +177,6 @@ export function inject({ config, posthog })
   });
   buttonsContainer.appendChild(buttonElement);
   
-
   buttonElement = Object.assign(document.createElement('button'), {
     className: 'button button-2',
     innerText: '2',
