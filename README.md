@@ -56,3 +56,4 @@ This app has some rough edges, because it was made by a lowly marketer who had n
 Obvious ideas include:
 
 - Integrating the app with PostHog's feature flags, so it can be targeted to certain types of users
+- Using feature flags to make it so it isn't only shown to users once
