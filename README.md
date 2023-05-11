@@ -1,5 +1,7 @@
 # NPS Score App
 
+![nps app](https://github.com/PostHog/nps-score-app/blob/fcfd601ad624addd47701416f8607dea4df5859d/screenshot.png)
+
 This is a basic site app which displays a simple 0-10 scale for users to tell you how likely they are to recommend your product. Button presses are then logged as events in PostHog, so you conduct analysis on them and compute your Net Promoter Score (NPS). 
 
 This app was [not made by an engineer](https://posthog.com/handbook/company/team/joe-martin), so expect some rough edges. 
