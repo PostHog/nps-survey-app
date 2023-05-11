@@ -8,6 +8,11 @@ This app was [not made by an engineer](https://posthog.com/handbook/company/team
 
 Thanks to @smallbrownbike @raquelmsmith @Twixes @pauldambra and @benjackwhite for various bits of advice, guidance and help. Thanks to @yakkomajuri for the initial encouragement.
 
+### Installation
+
+1. Make sure you have enabled `opt_in_site_apps: true` in your posthog-js config.
+2. Install the app from [the PostHog App Repository](posthog.com/apps)
+
 ### What is NPS?
 
 [Net Promoter Score (NPS)](https://en.wikipedia.org/wiki/Net_promoter_score) is a common metric for measuring user satisfaction and indicating business growth. 
