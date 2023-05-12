@@ -16,10 +16,23 @@ const style =`
   border-top: none;
   max-width: 519px;
 }
+.close-button {
+  position: fixed;
+  background: white;
+  padding: 3px;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: right;
+  justify-content: right;
+  z-index: 999999;
+  align-items: flex-start;
+}
 .prompt-container {
   position: fixed;
   background: white;
-  top: 85%;
+  top: 200%;
   left: 50%;
   transform: translate(-50%, -50%);
   flex-direction: column;
@@ -127,12 +140,11 @@ const style =`
   font-weight: normal;
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
-  text-align: center;
-  line-height: 20px;
   font-size: 16px;
   border: none;
   cursor: pointer;
   z-index: 999999;
+  padding-top: 12px;
   font-weight: 600;
   }
 `
@@ -142,9 +154,19 @@ export function inject({ config, posthog })
 {
   const shadow = createShadow(style);
 
+  const closeButton = Object.assign(document.createElement('button'), {
+    className: 'close-button',
+    innerText: 'X',
+    onclick: () => {
+      promptContainer.style.display = 'none';
+      closeButton.style.display = 'none';
+    },
+  });
+  shadow.appendChild(closeButton);
+
   const promptContainer = document.createElement('div');
   promptContainer.className = 'prompt-container';
-  shadow.appendChild(promptContainer);
+  closeButton.appendChild(promptContainer);
 
   const textarea = Object.assign(document.createElement('button'), {
     className: `prompt`,
