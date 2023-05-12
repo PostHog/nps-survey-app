@@ -19,7 +19,7 @@ const style =`
 .prompt-container {
   position: fixed;
   background: white;
-  top: 90%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   flex-direction: column;
@@ -34,7 +34,6 @@ const style =`
   min-width: 519px;
 }
 .button {
-  bottom: 200px;
   color: black;
   font-weight: normal;
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
