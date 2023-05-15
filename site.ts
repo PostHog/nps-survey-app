@@ -179,13 +179,13 @@ export function inject({ config, posthog })
   function updatePrompt() {
     console.log(`Updating prompt`);
     textarea.innerText = 'Thanks for your feedback!';
+    promptContainer.style.borderBottom = '2px solid black';
+    promptContainer.style.paddingBottom = '10px';
     setTimeout(function() {
       textarea.style.opacity = "0";
-      promptContainer.style.opacity = "0";
-      setTimeout(function() {
-        textarea.style.display = "none";
-      }, 500); // Hide the textarea after 500 milliseconds (0.5 seconds)
-    }, 3000); // Show the "Thank you" message for 3000 milliseconds (3 seconds)
+      textarea.style.display = "none";
+      promptContainer.style.display = "none";
+      }, 1500); // Hide the textarea after 1500 milliseconds (1.5 seconds)
   }
   
   function sendNPS(value: number) {
