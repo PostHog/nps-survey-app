@@ -14,7 +14,7 @@ const style =`
   display: flex;
   justify-content: center;
   border-top: none;
-  min-width: 503px;
+  min-width: 500px;
 }
 .close-button {
   color: #9c9ea6;
@@ -39,10 +39,9 @@ const style =`
   z-index: 999999;
   align-items: center;
   border: 2px solid black;
-  padding: 3px;
   background-color: white;
   border-bottom: none;
-  min-width: 521px;
+  min-width: 530px;
 }
 .button {
   color: black;
@@ -57,7 +56,6 @@ const style =`
   font-size: 14px;
   border: none;
   cursor: pointer;
-  z-index: 999999;
   margin-left: 5px
 }
 
@@ -67,67 +65,56 @@ const style =`
 }
 
 .button-0 {
-  right: 620px;
   background-color: #db7149;
   font-weight: bold;
 }
 
 .button-1 {
-  right: 560px;
   font-weight: bold;
   background-color: #db7149
 }
 
 .button-2 {
-  right: 500px;
   font-weight: bold;
   background-color: #db7149
 }
 
 .button-3 {
-  right: 440px;
   font-weight: bold;
   background-color: #db7149
 }
 
 .button-4 {
-  right: 380px;
   font-weight: bold;
   background-color: #eda83f
 }
 
 .button-5 {
-  right: 320px;
   font-weight: bold;
   background-color: #eda83f
 }
 
 .button-6 {
-  right: 260px;
   font-weight: bold;
   background-color: #eda83f
 }
 
 .button-7 {
-  right: 200px;
   font-weight: bold;
   background-color: #abc48a
 }
 
 .button-8 {
-  right: 140px;
   font-weight: bold;
   background-color: #abc48a
 }
 
 .button-9 {
-  right: 80px;
   font-weight: bold;
   background-color: #abc48a
 }
 
 .button-10 {
-  right: 20px;
   font-weight: bold;
   background-color: #abc48a
 }
@@ -144,6 +131,7 @@ const style =`
   z-index: 999999;
   padding-top: 12px;
   font-weight: 600;
+  min-width: 500px;
   }
 `
 
@@ -181,11 +169,12 @@ export function inject({ config, posthog })
     textarea.innerText = 'Thanks for your feedback!';
     promptContainer.style.borderBottom = '2px solid black';
     promptContainer.style.paddingBottom = '10px';
+    closeButton.style.opacity = "0";
     setTimeout(function() {
       textarea.style.opacity = "0";
       textarea.style.display = "none";
       promptContainer.style.display = "none";
-      }, 1500); // Hide the textarea after 1500 milliseconds (1.5 seconds)
+      }, 2000); // Hide the textarea after 2000 milliseconds (2 seconds)
   }
   
   function sendNPS(value: number) {
