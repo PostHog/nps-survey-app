@@ -148,7 +148,7 @@ export function inject({ config, posthog })
     className: `prompt`,
   });
   textarea.id = 'prompt';
-  textarea.innerText = config.prompt || 'On a scale of 0-10, how likely are you to recommend this product?';
+  textarea.innerText = 'On a scale of 0-10, how likely are you to recommend this product?';
   promptContainer.appendChild(textarea);
   
   const closeButton = Object.assign(document.createElement('button'), {
