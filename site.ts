@@ -75,7 +75,6 @@ const style =`
 }
 .button:hover {
   filter: brightness(0.8);
-  bottom: 25px;
 }
 .button-0, .button-1, .button-2, .button-3 {
   background-color: #db7149;
