@@ -5,15 +5,6 @@
   "config": [
     {
       "markdown": "## Notice: This site app injects code into your website, to display a prompt within your product. You need to **opt-in** to this by configuring your `posthog-js` initialization to include `opt_in_site_apps: true`."
-     },
-    {
-      "key": "prompt",
-      "name": "Question prompt",
-      "hint": "Customize this to add your product name",
-      "type": "string",
-      "default": "On a scale of 0-10, how likely are you to recommend this product?",
-      "required": false,
-      "site": true
-    }
+     }
   ]
 }
