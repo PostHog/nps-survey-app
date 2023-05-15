@@ -2,32 +2,6 @@
 
 const style =`
 
-.button-container {
-  position: fixed;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 2px solid black;
-  padding: 15px;
-  background-color: white;
-  align-items: flex-start;
-  display: flex;
-  justify-content: center;
-  border-top: none;
-  min-width: 500px;
-}
-.close-button {
-  color: #9c9ea6;
-  font-weight: normal;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  text-align: center;
-  font-size: 11px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  vertical-align: text-top;
-  z-index: 999999;
-}
 .prompt-container {
   position: fixed;
   background: white;
@@ -42,6 +16,34 @@ const style =`
   background-color: white;
   border-bottom: none;
   min-width: 530px;
+}
+.prompt {
+  color: black;
+  background: transparent;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 999999;
+  padding-top: 12px;
+  font-weight: 600;
+  min-width: 500px;
+}
+.button-container {
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid black;
+  padding: 15px;
+  background-color: white;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  border-top: none;
+  min-width: 500px;
 }
 .button {
   color: black;
@@ -59,38 +61,31 @@ const style =`
   margin-left: 5px;
   font-weight: bold;
 }
-
+.close-button {
+  color: #9c9ea6;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+  font-size: 11px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  vertical-align: text-top;
+  z-index: 999999;
+}
 .button:hover {
   filter: brightness(0.8);
   bottom: 25px;
 }
-
 .button-0, .button-1, .button-2, .button-3 {
   background-color: #db7149;
 }
-
 .button-4, .button-5, .button-6 {
   background-color: #eda83f;
 }
-
 .button-7, .button-8, .button-9, .button-10 {
   background-color: #abc48a
 }
-
-.prompt {
-  color: black;
-  background: transparent;
-  font-weight: normal;
-  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  text-align: center;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  z-index: 999999;
-  padding-top: 12px;
-  font-weight: 600;
-  min-width: 500px;
-  }
 `
 
 export function inject({ config, posthog }) 
