@@ -14,37 +14,34 @@ const style =`
   display: flex;
   justify-content: center;
   border-top: none;
-  max-width: 519px;
+  min-width: 503px;
 }
 .close-button {
-  position: fixed;
-  background: white;
-  padding: 3px;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  flex-direction: column;
-  align-items: right;
-  justify-content: right;
+  color: #9c9ea6;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+  font-size: 11px;
+  background: none;
+  border: none;
+  cursor: pointer;
   z-index: 999999;
-  align-items: flex-start;
 }
 .prompt-container {
   position: fixed;
   background: white;
-  top: 200%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   z-index: 999999;
-  align-items: flex-start;
+  align-items: center;
   border: 2px solid black;
   padding: 3px;
   background-color: white;
   border-bottom: none;
-  min-width: 519px;
+  min-width: 521px;
 }
 .button {
   color: black;
@@ -154,19 +151,9 @@ export function inject({ config, posthog })
 {
   const shadow = createShadow(style);
 
-  const closeButton = Object.assign(document.createElement('button'), {
-    className: 'close-button',
-    innerText: 'X',
-    onclick: () => {
-      promptContainer.style.display = 'none';
-      closeButton.style.display = 'none';
-    },
-  });
-  shadow.appendChild(closeButton);
-
   const promptContainer = document.createElement('div');
   promptContainer.className = 'prompt-container';
-  closeButton.appendChild(promptContainer);
+  shadow.appendChild(promptContainer);
 
   const textarea = Object.assign(document.createElement('button'), {
     className: `prompt`,
@@ -174,17 +161,30 @@ export function inject({ config, posthog })
   textarea.id = 'prompt';
   textarea.innerText = config.prompt || 'On a scale of 0-10, how likely are you to recommend this product?';
   promptContainer.appendChild(textarea);
+  
+  const closeButton = Object.assign(document.createElement('button'), {
+    className: 'close-button',
+    innerText: 'x',
+    onclick: () => {
+      promptContainer.style.display = 'none';
+    },
+  });
+  promptContainer.appendChild(closeButton);
 
   const buttonsContainer = document.createElement('div');
   buttonsContainer.className = 'button-container';
   promptContainer.appendChild(buttonsContainer);
   
   function updatePrompt() {
-      console.log(`Updating prompt`);
-      textarea.innerText = 'Thank you for your feedback!';
-      setTimeout(function(){
+    console.log(`Updating prompt`);
+    textarea.innerText = 'Thanks for your feedback!';
+    setTimeout(function() {
+      textarea.style.opacity = "0";
+      promptContainer.style.opacity = "0";
+      setTimeout(function() {
         textarea.style.display = "none";
-      }, 3000); // 3000 milliseconds = 3 seconds
+      }, 500); // Hide the textarea after 500 milliseconds (0.5 seconds)
+    }, 3000); // Show the "Thank you" message for 3000 milliseconds (3 seconds)
   }
   
   function sendNPS(value: number) {
