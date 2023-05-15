@@ -158,7 +158,7 @@ export function inject({ config, posthog })
       textarea.style.opacity = "0";
       textarea.style.display = "none";
       promptContainer.style.display = "none";
-    }, 2000); // Hide the textarea after 2000 milliseconds (2 seconds)
+    }, 2500); // Hide the textarea after 2500 milliseconds (2.5 seconds)
   }
   
   function sendNPS(value: number) {
