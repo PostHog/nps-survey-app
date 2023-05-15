@@ -8,7 +8,7 @@ When a user selects a score in the pop-up, PostHog records a 'NPS rating submitt
 
 This app was [not made by an engineer](https://posthog.com/handbook/company/team/joe-martin), so expect some rough, ugly edges. 
 
-Thanks to [@smallbrownbike](https://github.com/smallbrownbike) [@raquelmsmith](https://github.com/raquelmsmith) [@Twixes](https://github.com/twixes) [@pauldambra](https://github.com/pauldambra) and [@benjackwhite](https://github.com/benjackwhite) for various bits of advice, guidance and help. Thanks to [@yakkomajuri](https://github.com/yakkomajuri) for the initial encouragement.
+Thanks to [@smallbrownbike](https://github.com/smallbrownbike) [@raquelmsmith](https://github.com/raquelmsmith) [@Twixes](https://github.com/twixes) [@pauldambra](https://github.com/pauldambra) and [@benjackwhite](https://github.com/benjackwhite) for advice, guidance and help. Thanks to [@yakkomajuri](https://github.com/yakkomajuri) for the initial encouragement.
 
 ### Installation
 
