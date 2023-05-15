@@ -25,6 +25,7 @@ const style =`
   background: none;
   border: none;
   cursor: pointer;
+  vertical-align: text-top;
   z-index: 999999;
 }
 .prompt-container {
