@@ -37,7 +37,6 @@ const style =`
   font-weight: normal;
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
-  margin-left: 20px;
   font-size: 11px;
   border: none;
   cursor: pointer;
