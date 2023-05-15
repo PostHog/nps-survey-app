@@ -1,99 +1,15 @@
 {
   "name": "NPS App",
   "url": "https://github.com/PostHog/nps-score-app",
-  "description": "A simple NPS score collector",
+  "description": "A very simple NPS score collector",
   "config": [
     {
-      "key": "NPS0",
-      "name": "NPS0",
-      "type": "string",
-      "default": "NPS 0",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS",
-      "name": "NPS1",
-      "type": "string",
-      "default": "NPS 1",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS2",
-      "name": "NPS2",
-      "type": "string",
-      "default": "NPS 2",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS3",
-      "name": "NPS3",
-      "type": "string",
-      "default": "NPS 3",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS4",
-      "name": "NPS4",
-      "type": "string",
-      "default": "NPS 4",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS5",
-      "name": "NPS5",
-      "type": "string",
-      "default": "NPS 5",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS6",
-      "name": "NPS6",
-      "type": "string",
-      "default": "NPS 6",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS7",
-      "name": "NPS7",
-      "type": "string",
-      "default": "NPS 7",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS8",
-      "name": "NPS8",
-      "type": "string",
-      "default": "NPS 8",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS9",
-      "name": "NPS9",
-      "type": "string",
-      "default": "NPS 9",
-      "required": false,
-      "site": true
-    },
-    {
-      "key": "NPS10",
-      "name": "NPS 10 logged",
-      "type": "string",
-      "default": "NPS 10",
-      "required": false,
-      "site": true
-    },
+      "markdown": "## MANUAL STEP NOTICE: This app needs to injects code into your website through posthog-js. You need to **opt-in** on your site to enable this behaviour.\n\n```\nposthog.init(\"api_key\", {\n  \"api_host\": \"https://app.posthog.com\",\n  \"opt_in_site_apps\": true,\n})\n```"
+     },
     {
       "key": "prompt",
       "name": "prompt",
+      "hint": "Customize this to add your product name",
       "type": "string",
       "default": "On a scale of 0-10, how likely are you to recommend this product?",
       "required": false,
