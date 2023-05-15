@@ -32,7 +32,7 @@ Your overall NPS score is interpreted from your collected scores using the follo
 
 `NPS = % OF PROMOTERS - % DETRACTORS`
 
-As a result, NPS ranges from -100 to +100
+As a result, NPS ranges from -100 to +100. The higher the score, the better.
 
 ### What's a good NPS score?
 
