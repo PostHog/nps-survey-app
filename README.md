@@ -6,7 +6,9 @@ This is a basic site app for [PostHog](https://posthog.com/) which displays a si
 
 When a user selects a score in the pop-up, PostHog records a 'NPS rating submitted' event and the score is recorded as an event property between 0 and 10. You can analyze these events in PostHog to compute your NPS using the standard formula: `NPS = % OF PROMOTERS - % DETRACTORS` 
 
-This app was [not made by an engineer](https://posthog.com/handbook/company/team/joe-martin), so expect some rough, ugly edges. Thanks to @smallbrownbike @raquelmsmith @Twixes @pauldambra and @benjackwhite for various bits of advice, guidance and help. Thanks to @yakkomajuri for the initial encouragement.
+This app was [not made by an engineer](https://posthog.com/handbook/company/team/joe-martin), so expect some rough, ugly edges. 
+
+Thanks to [@smallbrownbike](https://github.com/smallbrownbike) [@raquelmsmith](https://github.com/raquelmsmith) [@Twixes](https://github.com/twixes) [@pauldambra](https://github.com/pauldambra) and [@benjackwhite](https://github.com/benjackwhite) for various bits of advice, guidance and help. Thanks to [@yakkomajuri](https://github.com/yakkomajuri) for the initial encouragement.
 
 ### Installation
 
