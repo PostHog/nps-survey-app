@@ -31,6 +31,22 @@ const style =`
   font-weight: 600;
   min-width: 500px;
 }
+.subtitle {
+  color: #9c9ea6;
+  background: transparent;
+  font-weight: normal;
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+  margin-left: 20px;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  z-index: 999999;
+  padding-top: 12px;
+  font-weight: 600;
+  min-width: 500px;
+  text-decoration: none;
+}
 .button-container {
   position: fixed;
   top: 100%;
@@ -119,14 +135,30 @@ export function inject({ config, posthog })
   function updatePrompt() {
     console.log(`Updating prompt`);
     textarea.innerText = 'Thanks for your feedback!';
+    textarea.style.marginLeft = "20px";
+
+    var lineBreak = document.createElement('br');
+    promptContainer.appendChild(lineBreak);
+  
+    var linkContainer = document.createElement('div');
+    linkContainer.style.textAlign = 'center';
+    promptContainer.appendChild(linkContainer);
+  
+    var link = document.createElement('a');
+    link.setAttribute('href', 'https://posthog.com');
+    link.innerText = 'Powered by PostHog';
+    link.className = 'subtitle';
+    linkContainer.appendChild(link);
+  
     promptContainer.style.borderBottom = '2px solid black';
     promptContainer.style.paddingBottom = '10px';
     closeButton.style.opacity = "0";
+    
     setTimeout(function() {
       textarea.style.opacity = "0";
       textarea.style.display = "none";
       promptContainer.style.display = "none";
-      }, 2000); // Hide the textarea after 2000 milliseconds (2 seconds)
+    }, 2000); // Hide the textarea after 2000 milliseconds (2 seconds)
   }
   
   function sendNPS(value: number) {
