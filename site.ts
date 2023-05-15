@@ -56,7 +56,8 @@ const style =`
   font-size: 14px;
   border: none;
   cursor: pointer;
-  margin-left: 5px
+  margin-left: 5px;
+  font-weight: bold;
 }
 
 .button:hover {
@@ -64,58 +65,15 @@ const style =`
   bottom: 25px;
 }
 
-.button-0 {
+.button-0, .button-1, .button-2, .button-3 {
   background-color: #db7149;
-  font-weight: bold;
 }
 
-.button-1 {
-  font-weight: bold;
-  background-color: #db7149
+.button-4, .button-5, .button-6 {
+  background-color: #eda83f;
 }
 
-.button-2 {
-  font-weight: bold;
-  background-color: #db7149
-}
-
-.button-3 {
-  font-weight: bold;
-  background-color: #db7149
-}
-
-.button-4 {
-  font-weight: bold;
-  background-color: #eda83f
-}
-
-.button-5 {
-  font-weight: bold;
-  background-color: #eda83f
-}
-
-.button-6 {
-  font-weight: bold;
-  background-color: #eda83f
-}
-
-.button-7 {
-  font-weight: bold;
-  background-color: #abc48a
-}
-
-.button-8 {
-  font-weight: bold;
-  background-color: #abc48a
-}
-
-.button-9 {
-  font-weight: bold;
-  background-color: #abc48a
-}
-
-.button-10 {
-  font-weight: bold;
+.button-7, .button-8, .button-9, .button-10 {
   background-color: #abc48a
 }
 
