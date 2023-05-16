@@ -136,14 +136,14 @@ export function inject({ config, posthog })
     textarea.innerText = 'Thanks for your feedback!';
     textarea.style.marginLeft = "20px";
 
-    var lineBreak = document.createElement('br');
+    let lineBreak = document.createElement('br');
     promptContainer.appendChild(lineBreak);
   
-    var linkContainer = document.createElement('div');
+    let linkContainer = document.createElement('div');
     linkContainer.style.textAlign = 'center';
     promptContainer.appendChild(linkContainer);
   
-    var link = document.createElement('a');
+    let link = document.createElement('a');
     link.setAttribute('href', 'https://posthog.com');
     link.innerText = 'Powered by PostHog';
     link.className = 'subtitle';
@@ -166,9 +166,7 @@ export function inject({ config, posthog })
     posthog.capture('NPS rating submitted', { value: value });
     const buttons = buttonsContainer.querySelectorAll('button');
     buttons.forEach(button => {
-      setTimeout(function(){
       button.style.display = "none";
-    }, 10); // 10 milliseconds = 0.001 seconds
   });
   buttonsContainer.style.display = 'none';
   }
