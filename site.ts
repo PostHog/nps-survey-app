@@ -37,11 +37,10 @@ const style =`
   font-weight: normal;
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
   border: none;
   cursor: pointer;
   z-index: 999999;
-  padding-top: 12px;
   font-weight: 600;
   min-width: 500px;
   text-decoration: none;
@@ -148,11 +147,6 @@ export function inject({ config, posthog })
     link.innerText = 'Powered by PostHog';
     link.className = 'subtitle';
     linkContainer.appendChild(link);
-
-    let image = document.createElement('img');
-    image.setAttribute('src', '/posthog.png');
-    image.setAttribute('alt', 'Powered by PostHog');
-    link.appendChild(image);
   
     promptContainer.style.borderBottom = '2px solid black';
     promptContainer.style.paddingBottom = '10px';
@@ -162,7 +156,7 @@ export function inject({ config, posthog })
       textarea.style.opacity = "0";
       textarea.style.display = "none";
       promptContainer.style.display = "none";
-    }, 3000); // 3 seconds
+    }, 5000); // 5 seconds because Tim wanted the PostHog name visible bigger, but I think it's big enough idk
   }
   
   function sendNPS(value: number) {
