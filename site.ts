@@ -139,7 +139,7 @@ export function inject({ config, posthog })
     let lineBreak = document.createElement('br');
     promptContainer.appendChild(lineBreak);
   
-    let linkContainer = document.createElement('div');
+    var linkContainer = document.createElement('div');
     linkContainer.style.textAlign = 'center';
     promptContainer.appendChild(linkContainer);
   
@@ -148,6 +148,11 @@ export function inject({ config, posthog })
     link.innerText = 'Powered by PostHog';
     link.className = 'subtitle';
     linkContainer.appendChild(link);
+
+    let image = document.createElement('img');
+    image.setAttribute('src', '/posthog.png');
+    image.setAttribute('alt', 'Powered by PostHog');
+    link.appendChild(image);
   
     promptContainer.style.borderBottom = '2px solid black';
     promptContainer.style.paddingBottom = '10px';
@@ -157,7 +162,7 @@ export function inject({ config, posthog })
       textarea.style.opacity = "0";
       textarea.style.display = "none";
       promptContainer.style.display = "none";
-    }, 2500); // Hide the textarea after 2500 milliseconds (2.5 seconds)
+    }, 3000); // 3 seconds
   }
   
   function sendNPS(value: number) {
