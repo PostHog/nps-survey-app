@@ -1,4 +1,4 @@
-# NPS Score App
+# NPS Survey App
 
 ![nps app](https://github.com/PostHog/nps-score-app/blob/da1a061f144f8f78c1ec5072bb26bd21d1a16929/nps2.gif)
 
