@@ -13,7 +13,7 @@ Thanks to [@smallbrownbike](https://github.com/smallbrownbike) [@raquelmsmith](h
 ### Installation
 
 1. Make sure you have enabled `opt_in_site_apps: true` in your posthog-js config.
-2. Install the app from [the PostHog App Repository](http://posthog.com/apps).
+2. Install the app from [the PostHog App Repository](http://app.posthog.com/apps).
 
 ### What is NPS?
 
