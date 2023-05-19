@@ -97,7 +97,6 @@ const style =`
   background-color: #abc48a
 }
 `
-
 export function inject({ config, posthog }) 
 
 {
@@ -144,7 +143,7 @@ export function inject({ config, posthog })
     link.className = 'subtitle';
     linkContainer.appendChild(link);
   
-    promptContainer.style.borderBottom = '2px solid black';
+    promptContainer.style.borderBottom = '1px solid gray';
     promptContainer.style.paddingBottom = '10px';
     closeButton.style.opacity = "0";
     
@@ -152,7 +151,7 @@ export function inject({ config, posthog })
       textarea.style.opacity = "0";
       textarea.style.display = "none";
       promptContainer.style.display = "none";
-    }, 5000); // 5 seconds because Tim wanted the PostHog name visible bigger, but I think it's big enough idk
+    }, 4000); // 4 seconds because Tim wanted the PostHog name visible bigger, but I think it's big enough idk
   }
   
   function sendNPS(value: number) {
