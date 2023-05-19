@@ -12,7 +12,7 @@ const style =`
   justify-content: center;
   z-index: 999999;
   align-items: center;
-  border: 2px solid black;
+  border: 1px solid grey;
   background-color: white;
   border-bottom: none;
   min-width: 530px;
@@ -23,7 +23,7 @@ const style =`
   font-weight: normal;
   font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
   border: none;
   cursor: pointer;
   z-index: 999999;
@@ -50,7 +50,7 @@ const style =`
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border: 2px solid black;
+  border: 1px solid grey;
   padding: 15px;
   background-color: white;
   align-items: flex-start;
@@ -87,16 +87,13 @@ const style =`
   vertical-align: text-top;
   z-index: 999999;
 }
-.button:hover {
-  filter: brightness(0.8);
-}
-.button-0, .button-1, .button-2, .button-3 {
+.button-0:hover, .button-1:hover, .button-2:hover, .button-3:hover {
   background-color: #db7149;
 }
-.button-4, .button-5, .button-6 {
+.button-4:hover, .button-5:hover, .button-6:hover {
   background-color: #eda83f;
 }
-.button-7, .button-8, .button-9, .button-10 {
+.button-7:hover, .button-8:hover, .button-9:hover, .button-10:hover {
   background-color: #abc48a
 }
 `
@@ -131,7 +128,6 @@ export function inject({ config, posthog })
   promptContainer.appendChild(buttonsContainer);
   
   function updatePrompt() {
-    console.log(`Updating prompt`);
     textarea.innerText = 'Thanks for your feedback!';
     textarea.style.marginLeft = "20px";
 
@@ -160,7 +156,6 @@ export function inject({ config, posthog })
   }
   
   function sendNPS(value: number) {
-    console.log(`Sending NPS with value: ${value}`);
     updatePrompt();
     posthog.capture('NPS rating submitted', { value: value });
     const buttons = buttonsContainer.querySelectorAll('button');
