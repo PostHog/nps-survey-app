@@ -12,7 +12,6 @@ const style =`
   justify-content: center;
   z-index: 999999;
   align-items: center;
-  border: 1px solid grey;
   background-color: white;
   border-bottom: none;
   min-width: 530px;
@@ -50,7 +49,6 @@ const style =`
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid grey;
   padding: 15px;
   background-color: white;
   align-items: flex-start;
@@ -143,7 +141,6 @@ export function inject({ config, posthog })
     link.className = 'subtitle';
     linkContainer.appendChild(link);
   
-    promptContainer.style.borderBottom = '1px solid gray';
     promptContainer.style.paddingBottom = '10px';
     closeButton.style.opacity = "0";
     
