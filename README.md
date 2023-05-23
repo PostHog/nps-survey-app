@@ -1,6 +1,6 @@
 # NPS Survey App
 
-![nps app](https://github.com/PostHog/nps-score-app/blob/da1a061f144f8f78c1ec5072bb26bd21d1a16929/nps2.gif)
+![nps app](https://github.com/PostHog/nps-survey-app/blob/61c2f6419a97ca8da33749a5b428f86bbc21de83/nps3.png)
 
 This is a basic site app for [PostHog](https://posthog.com/) which displays a simple 0-10 scale for users to tell you how likely they are to recommend your product. You can use this information to figure out your [Net Promoter Score (NPS)](https://en.wikipedia.org/wiki/Net_promoter_score)
 
